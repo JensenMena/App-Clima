@@ -1,0 +1,93 @@
+.card {
+    flex-direction: column;
+    max-width: 25em;
+    background-color: rgb(0 0 0 /.6);
+    padding: 2em 1.5em;
+    border-radius: 2em;
+    color: white;
+    gap: 1.5rem;
+
+    .card_title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.5em;
+    }
+
+    .card_country {
+        font-size: 0.8em;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .card_body {
+        grid-template-columns: 3fr 4fr;
+        align-items: center;
+
+        .card_image {
+            filter: drop-shadow(0px 0px 10px white);
+        }
+    }
+
+    .card_temp {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .card_btn {
+        font-size: 1em;
+        font-weight: 600;
+        background-color: white;
+        color: black;
+        box-shadow: 0px 0px 10px 1px white;
+        padding: 0.6em 1.6em;
+        border-radius: 1em;
+        transition: all 0.5s;
+
+        &:hover {
+            color: white;
+            background-color: black;
+            padding: 0.6em 2em;
+        }
+    }
+
+    .info {
+        gap: 1em;
+
+        .info_title {
+            font-size: 1em;
+            text-align: center;
+            font-weight: 500;
+            text-transform: capitalize;
+
+            &::after,
+            &::before {
+                content: '"';
+            }
+        }
+
+        .info_list {
+            gap: 0.5em;
+
+            .info_item {
+                font-size: 0.9em;
+                grid-template-columns: 3fr 3fr;
+
+                .info_label {
+                    color: white;
+                    margin-right: 0.5em;
+                }
+
+                .info_value {
+                    font-weight: 600;
+                }
+            }
+        }
+
+    }
+
+    @media (width > 768) {
+        & {
+            font-size: 1.2rem;
+        }
+    }
+}
